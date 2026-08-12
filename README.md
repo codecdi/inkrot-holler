@@ -70,17 +70,30 @@ inkrot-holler/
 
 ## 🚀 Local Server Launch
 
-To launch and preview the gallery locally:
+To launch and preview the gallery locally on Windows:
 
-### Option 1: Python HTTP Server
-```bash
-python -m http.server 8000
+### Option 1: Python HTTP Server (Recommended)
+First, navigate into the project directory:
+```powershell
+cd inkrot-holler
 ```
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Option 2: Node / npx serve
-```bash
-npx serve .
+Then run either `python` or `py`:
+```powershell
+python -m http.server 8000
+# OR if 'python' alias is missing, use the Windows Python launcher:
+py -m http.server 8000
+```
+If port 8000 is occupied, use an alternative port like `8080`:
+```powershell
+python -m http.server 8080
+```
+Then open [http://localhost:8000](http://localhost:8000) (or [http://localhost:8080](http://localhost:8080)) in your browser.
+
+### Option 2: Direct File Open
+Open `index.html` directly in your default browser:
+```powershell
+Start-Process index.html
 ```
 
 ---
