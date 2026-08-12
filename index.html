@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkrot Holler — Official Gallery | August L. Soloman</title>
+
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Official gallery and macabre portfolio of artist August L. Soloman. Exploring outré fine stipple ink art, abyssal landscapes, anatomical skulls, and dark visions. Digital inking powered by Clip Studio Paint.">
+  <meta name="keywords" content="Inkrot Holler, August L. Soloman, Stipple Art, Fine Ink, Macabre Art, Clip Studio Paint, Pointillism, Dark Art Gallery, Custom Commissions">
+  <meta name="author" content="August L. Soloman">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/branding/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Vignette Border & Noise Filter Overlay -->
+  <div class="vignette-frame"></div>
+  <div class="stipple-bg-overlay"></div>
+
+  <!-- Interactive Stipple Particle Background Canvas -->
+  <canvas id="stipple-canvas"></canvas>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="site-header">
+    <a href="#hero" class="brand-logo-container">
+      <img src="assets/images/branding/logo.svg" alt="Inkrot Holler Logo - August L. Soloman" class="brand-logo-svg">
+    </a>
+
+    <nav class="site-nav">
+      <a href="#gallery" class="nav-link active">Gallery</a>
+      <a href="#technique" class="nav-link">About Stippling</a>
+      <a href="#csp-ack" class="nav-link">Clip Studio Paint</a>
+      <a href="#quote" class="nav-link">Price Quote</a>
+      <a href="#quote" class="btn-quote-header">Commission Inquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-gothic-title">Inkrot Holler</h1>
+        <div class="hero-subtitle">AUGUST L. SOLOMAN</div>
+        <p class="hero-tagline">
+          "Millions of precise stipple dots bleeding into dark obsidian shadows — outré macabre iconography, anatomical relics, and eerie abyssal landscapes."
+        </p>
+        <div class="hero-cta-group">
+          <a href="#gallery" class="btn-primary">Explore Gallery</a>
+          <a href="#quote" class="btn-secondary">Request Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Clip Studio Paint Official Acknowledgement Banner
+         ========================================================================== -->
+    <section id="csp-ack" class="csp-ack-banner">
+      <div class="csp-ack-content">
+        <svg class="csp-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <div class="csp-text">
+          Digital inking & fine stipple shading workflow crafted with <strong>Clip Studio Paint EX</strong>.
+        </div>
+        <a href="https://www.clipstudio.net/" target="_blank" rel="noopener noreferrer" class="csp-official-link">
+          Official Clip Studio Paint Portal
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Gallery Section & Tag Filters
+         ========================================================================== -->
+    <section id="gallery" class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Macabre Portfolio</h2>
+        <p class="section-subtitle">Fine Stipple Ink Masterworks & Digital Originals</p>
+      </div>
+
+      <!-- Filter Tags -->
+      <div class="gallery-filter-container">
+        <button class="filter-btn active" data-filter="all">All Visions</button>
+        <button class="filter-btn" data-filter="macabre-entity">Macabre Entities</button>
+        <button class="filter-btn" data-filter="obsidian-landscape">Obsidian Landscapes</button>
+        <button class="filter-btn" data-filter="anatomy-skull">Anatomy & Skulls</button>
+        <button class="filter-btn" data-filter="stipple-portrait">Stipple Portraits</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="gallery-grid" class="gallery-grid">
+        <!-- Dynamically populated via assets/js/script.js -->
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         "About Stippling" Technique Showcase & Interactive Density Visualizer
+         ========================================================================== -->
+    <section id="technique" class="technique-section">
+      <div class="section-container" style="padding-top: 0; padding-bottom: 0;">
+        <div class="section-header">
+          <h2 class="section-title">About Stippling</h2>
+          <p class="section-subtitle">The Patience of Ten Hundred Thousand Dots</p>
+        </div>
+
+        <div class="technique-grid">
+          <div class="technique-text-block">
+            <h3>Precision Micro-Pointillism</h3>
+            <p>
+              Stippling is an arduous, devotional drawing technique where form, tone, and atmospheric shadow are created entirely through individual ink dots. By modulating dot size, proximity, and pressure, smooth velvet gradients emerge from stark white tooth to impenetrable obsidian darkness.
+            </p>
+            <p>
+              August L. Soloman combines traditional 0.05mm technical pens on archival vellum with custom-configured pressure-sensitive stipple engines in <strong>Clip Studio Paint</strong>. Each masterwork requires between 80 to 200 hours of continuous dot placement.
+            </p>
+            <p>
+              The result is a tactile, fine-grain texture that gives eerie macabre entities and anatomical structures an unsettling, atmospheric presence.
+            </p>
+          </div>
+
+          <div class="stipple-interactive-demo">
+            <h4 style="font-size: 1.2rem; color: var(--color-gold-bone); margin-bottom: 1rem;">
+              Interactive Dot Density Simulator
+            </h4>
+            <div class="stipple-demo-canvas-wrapper">
+              <canvas id="stipple-demo-canvas"></canvas>
+            </div>
+            <div class="demo-controls">
+              <div class="demo-slider-label">
+                <span>Stipple Point Density</span>
+                <span id="stipple-count-val">2,500</span>
+              </div>
+              <input type="range" id="stipple-density-slider" class="stipple-slider" min="200" max="6000" step="100" value="2500">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Price Quote Contact & Commission Interface
+         ========================================================================== -->
+    <section id="quote" class="contact-section">
+      <div class="section-header">
+        <h2 class="section-title">Commission & Quote Request</h2>
+        <p class="section-subtitle">Direct Contact Interface • August L. Soloman</p>
+      </div>
+
+      <div class="contact-card">
+        <form id="commission-quote-form" class="contact-form">
+          <div class="form-group">
+            <label for="quote-name" class="form-label">Collector / Client Name *</label>
+            <input type="text" id="quote-name" class="form-input" placeholder="e.g. Lord Roderick" required>
+          </div>
+
+          <div class="form-group">
+            <label for="quote-email" class="form-label">Email Address *</label>
+            <input type="email" id="quote-email" class="form-input" placeholder="your.email@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="quote-type" class="form-label">Inquiry Category *</label>
+            <select id="quote-type" class="form-select" required>
+              <option value="Original Artwork Purchase">Original Artwork Purchase</option>
+              <option value="Custom Stipple Commission">Custom Stipple Commission</option>
+              <option value="Limited Edition Archival Print">Limited Edition Archival Print</option>
+              <option value="Commercial / Book Cover Licensing">Commercial / Book Cover Licensing</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quote-budget" class="form-label">Estimated Budget Range *</label>
+            <select id="quote-budget" class="form-select" required>
+              <option value="$500 - $1,000 USD">$500 - $1,000 USD (Prints / Small Studies)</option>
+              <option value="$1,000 - $2,500 USD">$1,000 - $2,500 USD (Medium Canvas)</option>
+              <option value="$2,500 - $5,000 USD">$2,500 - $5,000 USD (Large Original Masterwork)</option>
+              <option value="$5,000+ USD">$5,000+ USD (Custom Suite / Private Collection)</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="quote-subject" class="form-label">Target Artwork Title or Subject Description *</label>
+            <input type="text" id="quote-subject" class="form-input" placeholder="e.g. Sentinel of the Abyss or Custom Anatomical Skull" required>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="quote-message" class="form-label">Project Vision & Commission Details *</label>
+            <textarea id="quote-message" class="form-textarea" placeholder="Provide dimensions, timeline expectations, or desired macabre themes..." required></textarea>
+          </div>
+
+          <div class="form-group full-width" style="margin-top: 1rem;">
+            <button type="submit" class="btn-primary" style="width: 100%;">
+              Transmit Commission Inquiry
+            </button>
+            <p class="target-email-notice">
+              Inquiries are formatted and dispatched directly to <strong>Iamthekeytothegates@gmail.com</strong>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Expandable Lightbox Modal Gallery
+       ========================================================================== -->
+  <div id="artwork-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content-container">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <button id="modal-prev" class="modal-nav-btn modal-prev" aria-label="Previous artwork">&#10094;</button>
+      <button id="modal-next" class="modal-nav-btn modal-next" aria-label="Next artwork">&#10095;</button>
+
+      <div class="modal-image-col">
+        <img id="modal-img" src="" alt="Artwork detail view" class="modal-full-img">
+      </div>
+
+      <div class="modal-details-col">
+        <div>
+          <h3 id="modal-title" class="modal-title">Artwork Title</h3>
+          <div id="modal-subtitle" class="modal-subtitle">Category • Year</div>
+          <p id="modal-desc" class="modal-description">Detailed description of the piece...</p>
+
+          <ul class="modal-specs-list">
+            <li><span>Medium:</span> <span id="modal-medium" class="val">-</span></li>
+            <li><span>Dimensions:</span> <span id="modal-dimensions" class="val">-</span></li>
+            <li><span>Clip Studio Integration:</span> <span class="val">Digital & Analog Fine Stipple</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <div id="modal-price" class="modal-price-tag">$0.00</div>
+          <a href="#quote" onclick="document.getElementById('modal-close').click();" class="btn-primary" style="display: inline-block; width: 100%; text-align: center;">
+            Inquire About This Piece
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="assets/images/branding/logo.svg" alt="Inkrot Holler" class="footer-logo">
+      <p class="footer-copyright">
+        &copy; 2026 Inkrot Holler — August L. Soloman. All Rights Reserved. Fine Stipple Inking powered by <a href="https://www.clipstudio.net/" target="_blank" rel="noopener">Clip Studio Paint</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
